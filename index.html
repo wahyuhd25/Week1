@@ -13,14 +13,20 @@
     <button id="changeText">Change Heading Text</button>
 </div>
 
-  <!-- Place jQuery and scripts here -->
-
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script>
+    const messages = [
+      "Hey There, I'm Using WhatsApp",
+      "Welcome to my, WOooooooRlldd",
+      "Renew Your Definition, World SO High"
+    ];
+
+    let index = 0;
     $('#changeText').click(() => {
-      $('#title').text('Hey There, Im Using Whatsapp');
+        $('#title').text(messages[index]);
+        index = (index + 1) % messages.length;
     });
-  </script>
+</script>
 
 </body>
 </html>
